@@ -1,0 +1,35 @@
+<idea-plugin>
+  <id>com.your.company.unique.plugin.id</id>
+  <name>Crescent</name>
+  <version>1.0</version>
+  <vendor email="me@12oclock.dev" url="https://www.12oclock.dev">12OClock Dev</vendor>
+
+  <description>
+    <![CDATA[
+      A plugin to add support for the Crescent language
+    ]]>
+  </description>
+
+  <change-notes>
+    <![CDATA[
+      Init
+    ]]>
+  </change-notes>
+
+  <!-- please see https://plugins.jetbrains.com/docs/intellij/build-number-ranges.html for description -->
+  <idea-version since-build="173.0"/>
+
+  <!-- please see https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html
+       on how to target different products -->
+  <depends>com.intellij.modules.platform</depends>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <fileType name="Crescent File" implementationClass="dev.twelveoclock.crescent.CrescentFileType"
+              fieldName="INSTANCE" language="Crescent" extensions="moon"/>
+  </extensions>
+
+  <actions>
+    <!-- Add your actions here -->
+  </actions>
+
+</idea-plugin>
