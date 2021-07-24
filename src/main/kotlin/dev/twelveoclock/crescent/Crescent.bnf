@@ -1,0 +1,20 @@
+{
+  parserClass="dev.twelveoclock.crescent.parser.CrescentParser"
+
+  extends="dev.twelveoclock.crescent.psi.ASTWrapperPsiElement"
+
+  psiClassPrefix="Crescent"
+  psiImplClassSuffix="Impl"
+  psiPackage="dev.twelveoclock.crescent.psi"
+  psiImplPackage="dev.twelveoclock.crescent.psi.impl"
+
+  elementTypeHolderClass="dev.twelveoclock.crescent.psi.CrescentTypes"
+  elementTypeClass="dev.twelveoclock.crescent.psi.CrescentElementType"
+  tokenTypeClass="dev.twelveoclock.crescent.psi.CrescentTokenType"
+}
+
+simpleFile ::= item_*
+
+private item_ ::= (property|COMMENT|CRLF)
+
+property ::= (KEY? SEPARATOR VALUE?) | KEY
